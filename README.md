@@ -16,9 +16,12 @@ values as different fields in Django Admin
 
 ## Usage
 
-```bash
-$ python manage.py runserver
-```
+- Use `JsonFieldWithTranslation` class in `CustomFields.py` 
+instead of normal `JSONField` to know the whether separate fields need to be
+created based on language codes.
+- While registering models in admin, create new admin model for the corresponding model which 
+inherits the properties and function from `CustomModelAdmin` defined in `CustomAdmin.py`
+
 ## Screenshots
 
 ![img.png](screenshots/sample.png)
